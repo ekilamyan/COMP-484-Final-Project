@@ -1,65 +1,26 @@
 <p>homepage works!</p>
 
-<div *ngFor="let day of days">
-    {{day}}
-    <mat-card>
-        <mat-card-title>{{days.date}}</mat-card-title>
-        <mat-card-content>{{days.}}</mat-card-content>
-    </mat-card>
-</div>
+<div fxLayout="column" fxLayoutAlign="space-around center" >
+    <div fxLayout="column" fxLayoutAlign="space-around stretch">
+        <form [formGroup]="zipcodeForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Zip Code</mat-label>
+                <input matInput placeholder="Enter Zip Code" formControlName="zipcode">
+                <mat-icon (click)="submit()" matSuffix>search</mat-icon>
+            </mat-form-field>
+        </form>
+    </div>
 
-<div fxLayout="column" fxLayoutAlign="space-evenly center">
-    <!-- Cards with media area -->
-    <mat-card class="example-card">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Small</mat-card-subtitle>
-                <img mat-card-sm-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-            </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-            {{longText}}
-        </mat-card-content>
-    </mat-card>
-
-    <mat-card class="example-card">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Medium</mat-card-subtitle>
-                <img mat-card-md-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                    alt="Image of a Shiba Inu">
-            </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-            {{longText}}
-        </mat-card-content>
-    </mat-card>
-
-    <mat-card class="example-card">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Large</mat-card-subtitle>
-                <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-            </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-            {{longText}}
-        </mat-card-content>
-    </mat-card>
-
-    <mat-card class="example-card">
-        <mat-card-header>
-            <mat-card-title-group>
-                <mat-card-title>Shiba Inu</mat-card-title>
-                <mat-card-subtitle>Extra large</mat-card-subtitle>
-                <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-            </mat-card-title-group>
-        </mat-card-header>
-        <mat-card-content>
-            {{longText}}
-        </mat-card-content>
-    </mat-card>
+    <div *ngFor="let day of days" fxFlex="100" fxLayout="row" fxLayoutAlign="space-around">
+        <mat-card>
+            <mat-card-title>{{day.date}}</mat-card-title>
+            <mat-card-content>{{day.day.condition.text}}</mat-card-content>
+            <mat-card-content>average temp: {{day.day.avgtemp_f}}</mat-card-content>
+            <mat-card-content>{{day.day.avgvis_miles}}</mat-card-content>
+            <mat-card-content>Simple card</mat-card-content>
+            <mat-card-content>Simple card</mat-card-content>
+            <mat-card-content>Simple card</mat-card-content>
+            <mat-card-content>Simple card</mat-card-content>
+        </mat-card>
+    </div>
 </div>
