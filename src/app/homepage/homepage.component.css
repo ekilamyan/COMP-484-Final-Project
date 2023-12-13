@@ -1,1 +1,33 @@
+/* input box */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: white;
+    border-radius: 5px;
+}
 
+
+/* forms and toggle */
+form {
+    width: 50%;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-slide-toggle {
+    margin-bottom: 17px;
+}
+
+
+/* weather boxes */
+.mat-expansion-panel-header {
+    height: 100px;
+}
+
+.days {
+    margin-top: 48px; /* must be same height of text above first day */
+}
+
+.mat-card-title {
+    width: 200px;
+}

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class WeatherService {
   public url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=';
-  public url_2 = 'https://weatherapi-com.p.rapidapi.com/forecast.json?days=3&q=';
+  public url_2 = 'https://weatherapi-com.p.rapidapi.com/forecast.json?days=5&q=';
   public apiKey = '&appid=0a42a7299bb4c8e5ef4cb6f154dcc250'
 
   constructor(private http: HttpClient) { }
