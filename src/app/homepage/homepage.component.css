@@ -21,7 +21,7 @@ form {
 
 /* weather boxes */
 .mat-expansion-panel-header {
-    height: 100px;
+    height: 264px;
 }
 
 .days {
@@ -30,4 +30,8 @@ form {
 
 .mat-card-title {
     width: 200px;
+}
+
+.icon {
+    font-size: 100px;
 }

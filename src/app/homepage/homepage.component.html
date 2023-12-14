@@ -11,13 +11,14 @@
 
     <h1>City: {{currentWeather.location.name}}</h1>
 
-    <div *ngIf="units == 'F'" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20px">
+    <div *ngIf="units == 'F'" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20">
         <div fxLayout="column" fxLayoutAlign="space-around center">
             <h2>Today</h2>
             <mat-expansion-panel hideToggle>
                 <mat-expansion-panel-header>
-                    <mat-panel-title fxLayout="column" fxLayoutAlign="center start">
-                        <mat-card-title>{{currentDate}}</mat-card-title>
+                    <mat-panel-title fxLayout="column" fxLayoutAlign="space-around center">
+                        <mat-card-title fxLayoutAlign="space-around center">{{currentDate}}</mat-card-title>
+                        <fa-icon class="icon" [icon]="getWeatherIcon(currentWeather.current.condition.text)"></fa-icon>
                         <mat-card-content>{{currentWeather.current.condition.text}}</mat-card-content>
                         <mat-card-content>Current: {{currentWeather.current.temp_f}}°</mat-card-content>
                         <mat-card-content>Feels Like: {{currentWeather.current.feelslike_f}}°</mat-card-content>
@@ -35,12 +36,12 @@
             </mat-expansion-panel>
         </div>
 
-
         <div *ngFor="let day of days">
             <mat-expansion-panel class="days" hideToggle>
                 <mat-expansion-panel-header>
-                    <mat-panel-title fxLayout="column" fxLayoutAlign="center start">
-                        <mat-card-title>{{day.date}}</mat-card-title>
+                    <mat-panel-title fxLayout="column" fxLayoutAlign="center center">
+                        <mat-card-title fxLayoutAlign="space-around center">{{day.date}}</mat-card-title>
+                        <fa-icon class="icon" [icon]="getWeatherIcon(day.day.condition.text)"></fa-icon>
                         <mat-card-content>{{day.day.condition.text}}</mat-card-content>
                         <mat-card-content>Max: {{day.day.maxtemp_f}}°</mat-card-content>
                         <mat-card-content>Min: {{day.day.mintemp_f}}°</mat-card-content>
@@ -48,8 +49,6 @@
                 </mat-expansion-panel-header>
 
                 <div fxLayout="column" fxLayoutAlign="space-around start">
-                    <!-- <mat-card-content>sunrise: {{day.astro}}</mat-card-content>
-                        <mat-card-content>sunset: {{day.astro}}</mat-card-content> -->
                     <mat-card-content>Avg: {{day.day.avgtemp_f}}°</mat-card-content>
                     <mat-card-content>Wind: {{day.day.maxwind_mph}} mph</mat-card-content>
                     <mat-card-content>Humidity: {{day.day.avghumidity}}%</mat-card-content>
@@ -57,7 +56,6 @@
                     <mat-card-content>Snow: {{day.day.daily_chance_of_snow}}%</mat-card-content>
                     <mat-card-content>UV: {{day.day.uv}}</mat-card-content>
                 </div>
-
             </mat-expansion-panel>
         </div>
     </div>
@@ -68,8 +66,9 @@
             <h2>Today</h2>
             <mat-expansion-panel hideToggle>
                 <mat-expansion-panel-header>
-                    <mat-panel-title fxLayout="column" fxLayoutAlign="center start">
-                        <mat-card-title>{{currentDate}}</mat-card-title>
+                    <mat-panel-title fxLayout="column" fxLayoutAlign="center center">
+                        <mat-card-title fxLayoutAlign="space-around center">{{currentDate}}</mat-card-title>
+                        <fa-icon class="icon" [icon]="getWeatherIcon(currentWeather.current.condition.text)"></fa-icon>
                         <mat-card-content>{{currentWeather.current.condition.text}}</mat-card-content>
                         <mat-card-content>Current: {{currentWeather.current.temp_c}}</mat-card-content>
                         <mat-card-content>Feels Like: {{currentWeather.current.feelslike_c}}</mat-card-content>
@@ -90,8 +89,9 @@
         <div *ngFor="let day of days">
             <mat-expansion-panel class="days" hideToggle>
                 <mat-expansion-panel-header>
-                    <mat-panel-title fxLayout="column" fxLayoutAlign="center start">
-                        <mat-card-title>{{day.date}}</mat-card-title>
+                    <mat-panel-title fxLayout="column" fxLayoutAlign="center center">
+                        <mat-card-title fxLayoutAlign="space-around center">{{day.date}}</mat-card-title>
+                        <fa-icon class="icon" [icon]="getWeatherIcon(day.day.condition.text)"></fa-icon>
                         <mat-card-content>{{day.day.condition.text}}</mat-card-content>
                         <mat-card-content>Max: {{day.day.maxtemp_c}}</mat-card-content>
                         <mat-card-content>Min: {{day.day.mintemp_c}}</mat-card-content>
@@ -99,8 +99,6 @@
                 </mat-expansion-panel-header>
 
                 <div fxLayout="column" fxLayoutAlign="space-around start">
-                    <!-- <mat-card-content>sunrise: {{day.astro}}</mat-card-content>
-                        <mat-card-content>sunset: {{day.astro}}</mat-card-content> -->
                     <mat-card-content>Avg: {{day.day.avgtemp_c}}°</mat-card-content>
                     <mat-card-content>Wind: {{day.day.maxwind_kph}} kph</mat-card-content>
                     <mat-card-content>Humidity: {{day.day.avghumidity}} %</mat-card-content>
@@ -108,7 +106,6 @@
                     <mat-card-content>Snow: {{day.day.daily_chance_of_snow}} %</mat-card-content>
                     <mat-card-content>UV: {{day.day.uv}}</mat-card-content>
                 </div>
-
             </mat-expansion-panel>
         </div>
     </div>
