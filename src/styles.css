@@ -5,9 +5,21 @@
         height: 100%;
         max-width: 1100px;
         margin: auto;
+      background-image: linear-gradient(to right, #ff512f, #f09819);
     }
 }
 
 html {
     height: 90%;    
+}
+
+header{
+    font-weight: bold;
+    font-size: xx-large;
+    /*font-family: "Sofia", sans-serif;*/
+    font-family: 'Bebas Neue', sans-serif;
+    /*padding-top: 1em;*/
+    padding-bottom: 2em;
+    letter-spacing: 0.5pc;
+    
 }
