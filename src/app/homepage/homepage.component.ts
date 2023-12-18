@@ -79,7 +79,11 @@ export class HomepageComponent implements OnInit {
   }
 
   getWeatherIcon(condition: string) {
-    if (condition.toLowerCase() === 'sunny') {
+
+    if (condition.toLowerCase() === 'clear') {
+      return faSun;
+    }
+    else if (condition.toLowerCase() === 'sunny') {
       return faSun;
     }
     else if (condition.toLowerCase() === 'clear') {
@@ -148,7 +152,7 @@ export class HomepageComponent implements OnInit {
     else if (condition.toLowerCase() === 'moderate rain at times') {
       return faCloudShowersHeavy;
     }
-    else if (condition.toLowerCase() === 'moderate rain	') {
+    else if (condition.toLowerCase() === 'moderate rain') {
       return faCloudShowersHeavy;
     }
     else if (condition.toLowerCase() === 'heavy rain at times') {
