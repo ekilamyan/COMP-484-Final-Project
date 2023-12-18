@@ -5,12 +5,12 @@
         height: 100%;
         max-width: 1100px;
         margin: auto;
-      background-image: linear-gradient(to right, #ff512f, #f09819);
     }
 }
 
 html {
     height: 90%;    
+    background-image: linear-gradient(to right, #ff512f, #f09819);
 }
 
 header{

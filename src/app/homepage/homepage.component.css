@@ -25,22 +25,36 @@ form {
     background-color: #E8BE14;
 }
 
+
+.mat-expansion-panel {
+    background-color: #E8BE14;
+}
+
 .days {
-    margin-top: 48px; /* must be same height of text above first day */
+    margin-top: 48px;
+    /* must be same height of text above first day */
     background-color: #E8BE14;
 }
 
 .mat-card-title {
     width: 200px;
-    font-weight:  bold;
+    font-weight: bold;
     font-family: 'Bebas Neue', sans-serif;
 }
 
+.mat-card-content {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    line-height: 27px;
+}
+
 .icon {
+    margin: 10px;
     font-size: 100px;
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: xx-large;
     font-weight: bold;
